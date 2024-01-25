@@ -1,11 +1,13 @@
 import React from 'react'
 import './index.css'
+import './App.css'
+import HomePage from './HomePage'
 
 const App = () => {
   return (
-    <div className='text-3xl underline'>
-      hello world
-    </div>
+<>
+<HomePage/>
+</>
   )
 }
 
