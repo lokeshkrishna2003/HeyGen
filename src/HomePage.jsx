@@ -17,7 +17,7 @@ const HomePage = () => {
             <div className="text-lg md:text-xl font-bold text-gray-800">HeyGen</div>
           </div>
           {/* Navigation Links for larger screens */}
-          <nav className="hidden md:flex ml-[10vw] gap-[2vw]">
+          <div className="hidden md:flex ml-[10vw] gap-[2vw]">
             {['Use Cases', 'Features', 'Resources', 'Pricing'].map((text, index) => (
               <div 
                 key={text}
@@ -25,12 +25,17 @@ const HomePage = () => {
                 onMouseLeave={() => setHoverIndex(-1)}
                 className={`flex items-center text-gray-800 hover:text-[#7559FF] px-3 py-2 rounded-md transition-colors cursor-pointer ${hoverIndex === index ? 'bg-gray-200' : ''}`}
               >
-{text!=='Pricing'?(<>
-  {text} {hoverIndex === index ? <MdKeyboardArrowUp className="ml-2" /> : <MdKeyboardArrowDown className="ml-2" />}
-</>):(<>{text}</>)}
+                {text !== 'Pricing' ? (
+                  <>
+                    <p>{text}</p>
+                    {hoverIndex === index ? <MdKeyboardArrowUp className="ml-2" /> : <MdKeyboardArrowDown className="ml-2" />}
+                  </>
+                ) : (
+                  <p>{text}</p>
+                )}
               </div>
             ))}
-          </nav>
+          </div>
           <div className="flex items-center space-x-4">
             {/* Contact Sales and Get Started buttons */}
             <a href="#" className="text-gray-800 hover:text-gray-600 transition-colors hidden md:block">Contact Sales</a>
