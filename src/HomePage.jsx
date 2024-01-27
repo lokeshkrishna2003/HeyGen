@@ -8,6 +8,7 @@ import {
 import "./App.css";
 import InteractiveShowcase from "./components/InteractiveShowcase";
 import CardComponent from "./components/CardComponent";
+import Avatars from "./components/Avatars";
 
 const HomePage = () => {
   // State to track which nav link is hovered
@@ -15,7 +16,8 @@ const HomePage = () => {
 
   return (
     <>
-      <div className="bg-[#E6E0F3] min-h-screen flex flex-col">
+    <div className="bg-[#E6E0F3]">
+    <div className="bg-[#E6E0F3] fixed z-10 w-full top-0 flex flex-col">
         {/* Navbar */}
         <div className="container mx-auto px-4 py-[1vw] flex justify-between items-center">
           <div className="flex items-center space-x-4">
@@ -34,7 +36,7 @@ const HomePage = () => {
                   onMouseLeave={() => setHoverIndex(-1)}
                   className={`flex items-center text-gray-800 px-3 py-2 rounded-md transition-colors hover:cursor-pointer ${
                     hoverIndex === index
-                      ? "bg-[#dbd5ea] rounded-[10vw] text-[#7559ff]"
+                      ? "bg-[#dbd5ea] rounded-[15vw] text-[#7559ff]"
                       : ""
                   }`}
                 >
@@ -77,9 +79,11 @@ const HomePage = () => {
             </div>
           </div>
         </div>
+    </div>
+      
 
         {/* Main Heading */}
-        <div className="container mx-auto  p-4 text-center flex-1 flex flex-col justify-center items-center mt-[2vw]">
+        <div className="container mx-auto  p-4 text-center flex-1 flex flex-col justify-center items-center mt-[7vw]">
           <h1 className="text-5xl md:text-7xl text-[#7559FF] font-bold mb-6">
             AI-powered video <br className="hidden md:block" />
             <span className="text-[#232833]">creations at scale</span>
@@ -111,47 +115,66 @@ const HomePage = () => {
               </div>
             </div>
           </div>
-          <div className="min-h-screen">
+          <div className="min-h-[60vh]">
             <InteractiveShowcase />
           </div>
-          <div>
-          <div className="min-h-[60vh] mt-20 relative flex ">
+          <div className="min-w-full min-height-[20vw] mt-10">
+            <div className="flex flex-col text-start mb-10 p-[7vw]   striped-background min-w-[100vw]">
 
             
-            <div className="flex flex-col">
-              <CardComponent
-                title1="Sales outreach"
-                title2="that converts"
-                description="Create personalized outreach videos at scale"
-                imageUrl="path-to-your-cover-image.jpg" // Replace with your actual image path
-              />
-              <CardComponent
-                title1="Content marketing"
-                title2="that engage"
-                description="Supercharge your content calendar with videos"
-                imageUrl="path-to-your-cover-image.jpg" // Replace with your actual image path
-              />
+            <div className="flex flex-col gap-3 text-[#ffffff] text-[8vw]">
+              <p className="relative top-20">Create Videos</p>
+              <p className="relative top-5">for every</p>
+              <p className="relative bottom-12">team</p>
             </div>
 
-            <div className="flex flex-col relative bottom-40 ">
-              <CardComponent
-                title1="Product marketing"
-                title2="that resonates"
-                description="Produce engaging & concise product videos"
-                imageUrl="path-to-your-cover-image.jpg" // Replace with your actual image path
-              />
-              <CardComponent
-                title1="Learning & development"
-                title2="that teaches"
-                description="Create training videos your team will actually watch"
-                imageUrl="path-to-your-cover-image.jpg" // Replace with your actual image path
-              />
+            <div className="relative flex ">
+              <div className="flex flex-col">
+                <CardComponent
+                  title1="Sales outreach"
+                  title2="that converts"
+                  description="Create personalized outreach videos at scale"
+                  imageUrl="path-to-your-cover-image.jpg" // Replace with your actual image path
+                  backGround="#d8b3fe"
+                />
+                <CardComponent
+                  title1="Content marketing"
+                  title2="that engage"
+                  description="Supercharge your content calendar with videos"
+                  imageUrl="path-to-your-cover-image.jpg" // Replace with your actual image path
+                  backGround="#d8b3fe"
+                />
+              </div>
+
+              <div className="flex flex-col  justify-center relative bottom-72 ">
+                <h1 className="p-4 text-[2vw] text-[#ffffff]">
+                  Engage, explain, entertain. AI-powered video creation for any
+                  need.
+                </h1>
+
+                <CardComponent
+                  title1="Product marketing"
+                  title2="that resonates"
+                  description="Produce engaging & concise product videos"
+                  imageUrl="path-to-your-cover-image.jpg" // Replace with your actual image path
+                  backGround="#d8b3fe"
+                />
+                <CardComponent
+                  title1="Learning & development"
+                  title2="that teaches"
+                  description="Create training videos your team will actually watch"
+                  imageUrl="path-to-your-cover-image.jpg" // Replace with your actual image path
+                  backGround="#d8b3fe"
+                />
+              </div>
+            </div>
+            </div>
+            <div className="min-h-screen">
+<Avatars/>
+
             </div>
           </div>
-          </div>
-
         </div>
-        
 
         {/* Marquee effect */}
       </div>

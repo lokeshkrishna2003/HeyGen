@@ -30,7 +30,7 @@ const InteractiveFeature = () => {
   };
 
   return (
-    <div className={`relative my-10  ml-[10vw] p-5 w-[50vw] h-[50vh] ${background}  border-gray-300 rounded-[2vw]`}>
+    <div className={`relative my-10  ml-[10vw] p-5 w-[50vw] h-[50vh] ${background} shadow-video  border-gray-300 rounded-[2vw]`}>
       {/* Lower container */}
       <button className="absolute top-4 left-4 bg-[#332E57] hover:bg-[#7559FF] text-white font-bold py-2 px-4 rounded-lg">
         Demo
@@ -39,7 +39,7 @@ const InteractiveFeature = () => {
       
 
       {/* Upper container with rounded divs */}
-      <div className="absolute  top-[6vw] h-[90%] flex flex-col gap-6 rounded-[10%] p-5 bg-[#EEE9F7] space-x-4 w-[20vw] -ml-[12vw] border">
+      <div className="absolute  top-[6vw] h-[90%] shadow-md flex flex-col gap-6 rounded-[10%] p-5 bg-[#EEE9F7] space-x-4 w-[20vw] -ml-[12vw] border">
         <div className='flex gap-3 '>
         {avatars.map((avatar, index) => (
           <div

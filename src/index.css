@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+body{
+    background-color: #E6E0F3;
+}
+
+@layer utilities {
+    .striped-background {
+      @apply bg-gradient-to-r;
+      background: linear-gradient(
+        -570deg,
+        #9c87fb 10%,
+        #8066ff 40%,
+        
+      
+        
+        #9783fb 60%,
+        #0c062d 90%
+      );
+    }
+  }

@@ -1,0 +1,5 @@
+<div className="relative my-10  ml-[10vw] p-5 w-[50vw] h-[50vh]  shadow-video  border-gray-300 rounded-[2vw]">
+        <button className="absolute top-4 left-4 bg-[#332E57] hover:bg-[#7559FF] text-white font-bold py-2 px-4 rounded-lg">
+          Demo
+        </button>
+      </div>
