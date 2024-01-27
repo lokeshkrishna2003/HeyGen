@@ -1,6 +1,8 @@
 // InteractiveFeature.js
 import React, { useState } from 'react';
+import { CiPlay1 } from 'react-icons/ci';
 import {ReactTyped} from 'react-typed';
+
 
 const InteractiveFeature = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -32,8 +34,9 @@ const InteractiveFeature = () => {
   return (
     <div className={`relative my-10  ml-[10vw] p-5 w-[50vw] h-[50vh] ${background} shadow-video  border-gray-300 rounded-[2vw]`}>
       {/* Lower container */}
-      <button className="absolute top-4 left-4 bg-[#332E57] hover:bg-[#7559FF] text-white font-bold py-2 px-4 rounded-lg">
+      <button className="absolute flex justify-center items-center gap-3  top-4 left-4 bg-[#332E57] hover:bg-[#7559FF] text-white font-bold py-3 px-4 rounded-lg">
         Demo
+        <CiPlay1 />
       </button>
 
       

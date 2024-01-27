@@ -1,4 +1,5 @@
 import React from 'react'
+import { CiPlay1 } from 'react-icons/ci';
 import { FaArrowRight } from 'react-icons/fa'
 
 
@@ -9,7 +10,7 @@ const AvatarCard = ({ number, title, description, image }) => {
         <div className="text-3xl text-start relative bottom-[2vw] font-semibold w-[80%]">{title}</div>
         <div className="text-gray-600 relative bottom-[2vw] text-start w-[80%]">{description}</div>
         <div
-          className="bg-cover h-[40%] border bg-center w-[80%]"
+          className="bg-cover h-[40%]  bg-center w-[80%]"
         >
             {/* image */}
         </div>
@@ -47,8 +48,10 @@ const Avatars = () => {
         <div className='w-[60%]  flex flex-col justify-around text-start'>
             <div className='h-[60%] border '>
                 <div className='relative -my-16  ml-[10vw] p-5 w-[50vw] h-[50vh] shadow-md  border-gray-300 rounded-[2vw]'>
-                <button className="absolute top-8 left-8 bg-[#332E57] hover:bg-[#7559FF] text-white font-bold py-2 px-4 rounded-lg">
+                <button className="absolute flex justify-center items-center gap-3 top-8 left-8 bg-[#332E57] hover:bg-[#7559FF] text-white font-bold py-3 px-4 rounded-lg">
         Demo
+
+        <CiPlay1/>
       </button>
                 </div>
                 
