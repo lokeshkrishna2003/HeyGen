@@ -114,8 +114,11 @@ const HomePage = () => {
           <div className="min-h-screen">
             <InteractiveShowcase />
           </div>
+          <div>
           <div className="min-h-[60vh] mt-20 relative flex ">
-            <div>
+
+            
+            <div className="flex flex-col">
               <CardComponent
                 title1="Sales outreach"
                 title2="that converts"
@@ -130,7 +133,7 @@ const HomePage = () => {
               />
             </div>
 
-            <div className="relative bottom-40 ">
+            <div className="flex flex-col relative bottom-40 ">
               <CardComponent
                 title1="Product marketing"
                 title2="that resonates"
@@ -145,7 +148,10 @@ const HomePage = () => {
               />
             </div>
           </div>
+          </div>
+
         </div>
+        
 
         {/* Marquee effect */}
       </div>
